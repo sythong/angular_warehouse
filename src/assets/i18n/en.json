@@ -1,0 +1,56 @@
+{
+    "btnSkip": "SKIP",
+    "btnNext": "NEXT",
+    "btnGotIt": "GOT IT",
+
+    "slide1Title": "Meet Roger",
+    "slide1Text": "Welcome to the warehouse demo app.<br/>Step in the shoes of Roger<br/>from the Furniture store warehouse.",
+
+    "slide2Title": "Orders",
+    "slide2Text": "Roger and his teammates assign<br/>themselves the incoming customer<br/>orders from the online store. It's done<br/> either by entering the number of the<br/>order manually or by scanning a barcode.",
+
+    "slide3Title": "Search mode",
+    "slide3Text": "Roger then starts looking for the items to<br/>fulfill his assigned orders. He's able to<br/>see the location of each item in the<br/>warehouse, or tap to expand and see<br/>further details.",
+
+    "slide4Title": "Completion",
+    "slide4Text": "When Roger finds an item, he marks it as<br/>found. When he retrieves all items, he's<br/>allowed to finalize the order. If he can't find<br/>items, he's able to raise a flag by marking<br/> an order as 'incomplete'.",
+
+    "btnActive": "ACTIVE",
+    "btnArchive": "ARCHIVE",
+    "lblSearchBoxDefaultText": "Search active orders",
+    "lblCompleted": "Completed",
+    "lblIncompleted": "Incompleted",
+    "lblQuickComplete": "Quick Complete",
+    "lblCannotComplete": "Cannot Complete",
+    "lblMovedToCompleted": "Order moved to completed",
+    "lblMovedToIncompleted": "Order moved to incompleted",
+    "btnUndo": "UNDO",
+
+    "lblActive": "Active Order",
+    "lblArchiveOrders": "Archive orders",
+    "lblCompleteOrder": "Complete Order",
+    "lblIncompleteOrder": "Incomplete Order",
+    "lblCreatedOn": "Created on ",
+    "lblCompletedOn": "Completed on ",
+
+    "emptyListTemplateHeader": "No active orders found.",
+    "emptyListTemplateDescription": "Could the order you're looking for be in the Archive already?",
+
+    "btnSentToActive": "SEND TO ACTIVE",
+    "btnPermanentlyDelete": "PERMANENTLY DELETE",
+    "btnCompleteOrder": "COMPLETE ORDER",
+
+    "lblMissingItems": "If there are missing items from the list, you can",
+    "lblMarkTheOrderAsIncomplete": "mark the order as incomplete",
+
+    "lblOrderToActive": "Order sent to active!",
+    "lblOrderToDeleted": "Order successfully deleted.",
+    "lblOrderToCompleted": "Order successfully completed.",
+    "lblOrderToIncomplete": "Order marked as incomplete.",
+
+    "lblAddOrder": "Add Order",
+    "lblNoOrders": "There are no orders",
+    "lblSelectOrder": "Select an order",
+    "lblOrderSuccessful": "Order successfully added."
+
+}

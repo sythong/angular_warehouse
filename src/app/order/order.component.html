@@ -1,0 +1,69 @@
+<igx-navbar [title]="pageTitle" actionButtonIcon="arrow_back" (onAction)="backButtonClicked()">
+</igx-navbar>
+
+<div class="orderInfo">
+  Order Number<br />
+  {{order.id}}<br />
+  Date<br />
+  {{order.date}}
+</div>
+
+<div class="orderItems">
+
+  <igx-list>
+    <igx-list-item *ngFor="let item of order.items">
+
+      <div>
+        <div>
+          <div style="display: inline-block;">
+            <igx-checkbox [(ngModel)]="item.Found" [checked]="item.Found" [disabled]="itemsDisabled"></igx-checkbox>
+          </div>
+          {{item.Quantity}}x
+          {{item.ID}}
+          <span class="aisleBin">{{item.Aisle}}</span>&nbsp;
+          <span class="aisleBin">{{item.Bin}}</span>
+          <div style="display: inline-block;">
+            <button igxButton="icon" igxRipple igxRippleCentered="true" (click)="toggleListItem(item.ID)">
+              <igx-icon fontSet="material">{{convertExpandedStateToIcon(item.ID)}}</igx-icon>
+            </button>
+          </div>
+        </div>
+        <div id="cont_{{order.id}}_{{item.ID}}" [style.display]="convertBooleanToDisplay(item.Expanded)">
+          <img src="{{item.Image}}" style="float:left; margin:5px; width:60px; height:60px;">
+          <span>{{item.Name}}</span><br />
+          <span>{{item.Description}}</span><br />
+          <span>{{item.Price}}</span>
+        </div>
+      </div>      
+      
+    </igx-list-item>
+  </igx-list>
+
+</div>
+
+<div class="orderActionButtons">
+
+  <button igxButton="raised" igxButtonColor="white" igxButtonBackground="#1276BC" class="actionButton"
+          (click)="btnSentToActiveHandler()" *ngIf="order.status == 1">
+    {{ "btnSentToActive" | translate }}
+  </button><br />
+
+  <button igxButton="raised" igxButtonColor="white" igxButtonBackground="#CE0022" class="actionButton"
+         (click)="btnDeleteHandler()" *ngIf="order.status == 1 || order.status == 2">
+    {{ "btnPermanentlyDelete" | translate }}
+  </button><br />
+
+  <button igxButton="raised" igxButtonColor="white" igxButtonBackground="#1276BC" class="actionButton"
+          (click)="btnCompleteHandler()" *ngIf="order.status == 0" [disabled]="orderCompletionDisabled">
+    {{ "btnCompleteOrder" | translate }}
+  </button><br />
+
+  <span *ngIf="order.status == 0">
+    {{ "lblMissingItems" | translate }}
+  </span><br />
+
+  <a href="#" (click)="btnMarkAsIncompleteHandler()" *ngIf="order.status == 0">
+    {{ "lblMarkTheOrderAsIncomplete" | translate }}
+  </a>
+
+</div>

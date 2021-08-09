@@ -1,0 +1,23 @@
+.orderInfo {
+    color: black;
+    margin: 10px;
+}
+
+.orderItems {
+    color: black;
+}
+
+.aisleBin {
+    background-color: #1276BC;
+    color: white;
+}
+
+.orderActionButtons {
+    text-align: center;
+}
+
+.actionButton {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 230px;
+}
